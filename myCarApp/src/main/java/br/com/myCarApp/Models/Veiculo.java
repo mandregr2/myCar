@@ -13,14 +13,11 @@ public class Veiculo {
     private String tipoVeiculo;
     private String marcaVeiculo;
     private double kilometragem;
+    private String idLogin;
 
     protected Veiculo() {}
 
-    public Veiculo(String tipo, String marca, double km) {
-        this.tipoVeiculo = tipo;
-        this.marcaVeiculo = marca;
-        this.kilometragem = km;
-    }
+   
 
     @Override
     public String toString() {
@@ -28,6 +25,30 @@ public class Veiculo {
                 "Veiculo[id=%d, tipoVeiculo='%s', marcaVeiculo='%s', kilometragem=%d]",
                 id, tipoVeiculo, marcaVeiculo, kilometragem);
     }
+
+    
+	public Veiculo(Long id, String tipoVeiculo, String marcaVeiculo, double kilometragem, String idLogin) {
+		super();
+		this.id = id;
+		this.tipoVeiculo = tipoVeiculo;
+		this.marcaVeiculo = marcaVeiculo;
+		this.kilometragem = kilometragem;
+		this.idLogin = idLogin;
+	}
+
+
+
+	public String getIdLogin() {
+		return idLogin;
+	}
+
+
+
+	public void setIdLogin(String idLogin) {
+		this.idLogin = idLogin;
+	}
+
+
 
 	public Long getId() {
 		return id;
